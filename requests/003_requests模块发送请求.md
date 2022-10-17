@@ -28,7 +28,7 @@ print(response.request.headers)
 
 返回的请求头
 
-![image-20221017153451881](./static/images/image-20221017153451881-1666015435463-8.png) 
+![image-20221017153451881](./static/images/image-20221017153451881.png) 
 
 ### 1. 思考
 
@@ -370,8 +370,37 @@ response = requests.get(url, timeout=3)
 timeout=3表示:发送请求后,3秒钟内返回响应,否则就抛出异常
 
 ```python
+# coding: utf8
+""" 
+@File: part_004.py
+@Author: Alice(From Chengdu.China)
+@HomePage: https://github.com/AliceEngineerPro
+@CreatedTime: 2022/10/18 2:47
+"""
+
+import os, sys
+
+"""超时timeout参数和proxies的使用"""
+
+import requests
+
 url = 'https://twitter.com'
-response = requests.get(url, timeout=3)  # 设置超时时间
+
+try:
+    response = requests.get(url=url, timeout=3)
+    print('第一次请求', response.status_code)
+except Exception as error:
+    print('第一次请求', error)
+finally:
+    proxy = {
+        'http': 'http://127.0.0.1:56789',
+        'https': 'http://127.0.0.1:56789',
+    }
+    try:
+        response = requests.get(url=url, timeout=3, proxies=proxy)
+        print('第二次请求', response.status_code)
+    except Exception as error:
+        print('第二次请求', error)
 ```
 
 ## 七. 了解代理以及proxy代理参数的使用
@@ -455,6 +484,40 @@ proxies = {
 
 - **注意:如果proxies字典中包含有多个键值对,发送请求时将按照url地址的协议来选择使用相应的代理ip** 
 
+```python
+# coding: utf8
+""" 
+@File: part_004.py
+@Author: Alice(From Chengdu.China)
+@HomePage: https://github.com/AliceEngineerPro
+@CreatedTime: 2022/10/18 2:47
+"""
+
+import os, sys
+
+"""超时timeout参数和proxies的使用"""
+
+import requests
+
+url = 'https://twitter.com'
+
+try:
+    response = requests.get(url=url, timeout=3)
+    print('第一次请求', response.status_code)
+except Exception as error:
+    print('第一次请求', error)
+finally:
+    proxy = {
+        'http': 'http://127.0.0.1:56789',
+        'https': 'http://127.0.0.1:56789',
+    }
+    try:
+        response = requests.get(url=url, timeout=3, proxies=proxy)
+        print('第二次请求', response.status_code)
+    except Exception as error:
+        print('第二次请求', error)
+```
+
 ## 八. 使用verify参数忽略CA证书
 
 > 在使用浏览器上网的时候,有时能够看到下面的提示(2018年10月之前的12306网站)
@@ -465,13 +528,7 @@ proxies = {
 
 ### 1. 运行代码查看代码中向不安全的链接发起请求的效果
 
-运行下面的代码将会抛出包含`ssl.CertificateError...`字样的异常
-
-```python
-import requests
-url = "https://sam.huat.edu.cn:8443/selfservice/"
-response = requests.get(url)
-```
+如果代码抛出包含`ssl.CertificateError...`字样的异常
 
 ### 2. 解决方案
 
@@ -479,7 +536,7 @@ response = requests.get(url)
 
 ```python
 import requests
-url = "https://sam.huat.edu.cn:8443/selfservice/" 
+url = "url" 
 response = requests.get(url,verify=False)
 ```
 
