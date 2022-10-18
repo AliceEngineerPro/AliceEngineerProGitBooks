@@ -1,4 +1,4 @@
-# requests模块发送请求
+# requests模块发送GET请求
 
 ## 一. 发送带header的请求
 
