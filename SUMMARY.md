@@ -3,7 +3,7 @@
 - [Python Repositories](./README.md) 
 - [Python Spider](./PythonSpider/README.md) 
   - [爬虫基础](./PythonSpider/001_PythonSpider_basic/README.md) 
-    - [HTTP协议](./PythonSpider/001_PythonSpider_basic/001_http协议.md) 
+    - [HTTP协议](./PythonSpider/001_spider_basic/001_http协议.md) 
   - [requests模块](./PythonSpider/002_requests/README.md) 
     - [requests模块介绍](./PythonSpider/002_requests/001_requests模块介绍.md)
     - [response响应对象](./PythonSpider/002_requests/002_response响应对象.md)
