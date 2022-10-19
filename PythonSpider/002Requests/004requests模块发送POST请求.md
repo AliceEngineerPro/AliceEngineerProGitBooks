@@ -95,7 +95,6 @@ class Baidu(object):
         }
 
     def get_method(self):
-        print(type(self.url))
         pass
 
     def post_method(self):
