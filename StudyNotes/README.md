@@ -1,4 +1,4 @@
 # StudyNotes
 
-- [Python](https://interestingboos.gitbook.io/python) 
+- [Python](https://interestingbooks.gitbook.io/python) 
 
