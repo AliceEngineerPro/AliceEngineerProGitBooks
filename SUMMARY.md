@@ -17,4 +17,8 @@
     - [数据提取: lxml模块](./PythonSpider/003_DataExtraction/003_lxml模块.md) 
   - [Selenium和ChromeDriver](./PythonSpider/004_Selenium/README.md) 
     - [Selenium的介绍](./PythonSpider/004_Selenium/001_selenium介绍.md) 
-
+  - [抓包反爬和反反爬](./PythonSpider/005_抓包反爬和反反爬/README.md) 
+    - [常见的反爬手段和解决思路](./PythonSpider/005_抓包反爬和反反爬/001_常见的反爬手段和解决思路.md) 
+    - [验证码处理](./PythonSpider/005_抓包反爬和反反爬/002_验证码处理.md) 
+    - [Chrome浏览器使用方法介绍](./PythonSpider/005_抓包反爬和反反爬/003_Chrome浏览器使用方法介绍.md) 
+    - [JS的解析](./PythonSpider/005_抓包反爬和反反爬/004_JS的解析.md) 
