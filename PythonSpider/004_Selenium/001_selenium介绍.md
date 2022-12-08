@@ -83,7 +83,7 @@ python代码能够自动的调用谷歌浏览或phantomjs无界面浏览器，�
 ### 1. 安装selenium模块
 
 ```shell
-pip install selenium==2.48.0
+pip install selenium==4.7.2
 ```
 
 ### 2. 下载版本符合的webdriver
